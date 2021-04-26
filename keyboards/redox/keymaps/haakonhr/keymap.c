@@ -28,6 +28,9 @@ enum custom_keycodes {
 #define KC_ADEN LT(_ADJUST, KC_END)
 #define KC_ADPU LT(_ADJUST, KC_PGUP)
 
+const uint16_t PROGMEM esc_combo[] = {KC_J, KC_K, COMBO_END};
+combo_t key_combos[COMBO_COUNT] = {COMBO(esc_combo, KC_ESC)};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_QWERTY] = LAYOUT(
